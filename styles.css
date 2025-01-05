@@ -1,0 +1,274 @@
+/* Estilos básicos para Blog Locura Creativa */
+/* 
+* {
+    border: 2px solid red;
+} */
+
+* {
+    margin: 15px;
+}
+
+label {
+    cursor: url('./images/Lantern.png')16 16, text;
+}
+
+input, textarea {
+    cursor: url('./images/Lantern-select.png') 16 16, auto;
+}
+
+:root {
+    --color-bone: #850000; 
+    --color-shadow: #2A2A2A;
+    --color-accent: #4a0e0e;
+    --color-background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-shadow) 100%);
+    
+    --color-text: #ff0000;
+    --pointerX: 50vw;
+    --pointerY: 50vh;
+    text-shadow: 1px 4px 0px black, 
+    -1px 2px 0px black, 
+    1px -2px 0px black, 
+    -1px -4px 0px black, 
+    0px 2px 0px black, 
+    0px -2px 0px black, 
+    1px 2px 0px black, 
+    -1px 4px 0px black;
+}
+
+body {
+    font-family: Eater, Arial, sans-serif;
+    cursor: url('./images/Lantern.png') 16 16, auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    color: var(--color-text);
+    background: linear-gradient(to bottom, 
+    #1C0731  0%, 
+    #6B0A15 40%, 
+    #1C0731 70%, 
+    #141414 90%, 
+    #000000 100%
+  );
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle 15vmax at var(--pointerX) var(--pointerY),
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0.95) 100%);
+    pointer-events: none;
+}
+
+h2, p, h3, label {
+    margin: 10px;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+
+header {
+    background-color: var(--color-shadow);
+    color: var(--color-bone);
+    padding: 20px 0;
+    text-align: center;
+    margin: -15px;
+    margin-bottom: 0;
+    background-image: url(./images/Banner.jpg);
+    background-size: 100% 100%; ;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.featured-post,
+article {
+    background-image: url(./images/Tomb.png), url(./images/Blood.png);
+    background-repeat: no-repeat;
+    background-size:  350px, cover;
+    background-position:  bottom right, center;
+}
+
+.featured-post {
+    background-color: var(--color-accent);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url(./images/Tomb.png), url(./images/Blood.png);
+    background-repeat: no-repeat;
+    background-size: 500px, cover;
+    background-position: bottom right, center;
+}
+
+
+.featured-post img {
+    max-width: 100%;
+    height: auto;
+}
+
+.featured-post p {
+    font-size: 1.2em;
+    line-height: 4;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.blog-posts article {
+    background-color: var(--color-shadow);
+    width: 45%;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-mist);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos de redes sociales */
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+a {
+    color: var(--color-blood);
+}
+
+
+.read-more {
+    font-family: Eater;
+    font-size: large;
+    background-image: repeating-linear-gradient(to left, indigo, blue, green, red );
+    color: var(--color-bone);
+    font-weight: bold;
+    background-clip: border-box; 
+    text-shadow: 1px 1px 0px black, -1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black, 0px 1px 0px black, 0px -1px 0px black, 1px 0px 0px black, -1px 0px 0px black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+article {
+    border: solid 5px rgb(92, 92, 92);
+}
+
+article img {
+    background-color: black;
+    max-width: 250px;
+    height: auto;    
+}
+
+.comments {
+    max-width: max-content;
+    margin: auto;
+}
+
+.comments, .commentator-info {
+    border: solid 5px rgb(92, 92, 92);
+}
+
+.commentator-info {
+    width: fit-content;
+    border-style: dotted;
+}
+
+.single-comment {
+    width: 600px;
+    border: solid 5px rgb(165, 165, 165);
+}
+
+.image-comment, .name-comment {
+     height: 50px;
+     margin: 0 20px;
+}
+
+button {
+    margin: 10px 0;
+    --x: 50%;
+	--y: 50%;
+	position: relative;
+	appearance: none;
+	padding: 1em 2em;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	border-radius: 100px;
+	border: 2px solid transparent;
+	background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bit-button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 10px;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#function-buttons {
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    border: solid 5px rgba(0, 0, 0, 0.25);
+    
+}
+
+#about-us-main {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
