@@ -220,7 +220,6 @@ button {
     margin: 10px 0;
     --x: 50%;
 	--y: 50%;
-	position: relative;
 	appearance: none;
 	padding: 1em 2em;
 	color: white;
